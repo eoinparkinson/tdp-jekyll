@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v4.12.3, mobirise.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="assets/images/favicon-1.ico" type="image/x-icon">
+
+    <title>{{ page.title }}</title>
+
+    <!-- MR Style Sheets -->
+    <link rel="stylesheet" href="css/web/assets/mobirise-icons/mobirise-icons.css">
+    <link rel="stylesheet" href="/https://fonts.googleapis.com/css?family=Roboto:700,400&subset=cyrillic,latin,greek,vietnamese">
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animatecss/animate.min.css">
+    <link rel="stylesheet" href="css/socicon/css/socicon.min.css">
+    <link rel="stylesheet" href="css/mobirise/css/style.css">
+    <link rel="stylesheet" href="css/mobirise-slider/style.css">
+    <link rel="stylesheet" href="css/mobirise-gallery/style.css">
+    <link rel="preload" as="style" href="css/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="css/mobirise/css/mbr-additional.css" type="text/css">
+    <!-- End MR Style Sheets -->
+
+
+    <!-- Netlify Identity Tag -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <!-- /Netlify Identity Tag -->
+
+  </head>
+  <body>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151175509-3"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-151175509-3');
+    </script>
+    <!-- /Google Analytics -->
+
+
+    <!-- Include header of selected page -->
+    {% include header.html %}
+
+    <!-- Include hero title bar -->
+    {% include hero_title.html %}
+
+    <!-- Display current page title-->
+    <h1>{{ page.title }}</h1>
+    <section>
+      {{ content }}
+    </section>
+    <footer>
+      &copy; to me
+    </footer>
+
+
+
+
+    <!-- Netlify Identity Redirect -->
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+    <!-- /Netlify Identity Redirect -->
+  </body>
+</html>
